@@ -83,51 +83,33 @@ header img {
     height: auto; /* Define a altura da imagem, ajuste conforme necessário */
 }
 
-#conteudoPrincipal {
-    display: flex;
-    margin-top: 80px; /* Espaço para o header fixo */
+/* Conteúdo principal */
+#colunaPrincipal {
+    margin-top: 180px;
+    display: flex; /* Define a estrutura de colunas */
     padding: 20px;
-    gap: 20px;
 }
 
 /* Coluna esquerda */
 #colunaEsquerda {
-    flex: 3;
+    flex: 3; /* Define a largura da coluna esquerda */
+    padding-right: 20px; /* Espaçamento entre as colunas */
 }
 
 #colunaEsquerda section {
     margin-bottom: 20px;
 }
 
-#colunaEsquerda img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#colunaEsquerda h2 {
-    margin-bottom: 10px;
-    color: #f57c00;
-}
-
-.promocao, .categoria, .produtoRelampago {
-    margin-bottom: 15px;
-    text-align: center;
-}
-
 /* Coluna direita */
 #colunaDireita {
-    flex: 1;
-    background-color: #fff;
+    flex: 1; /* Define a largura da coluna direita */
     padding: 20px;
-    border: 1px solid #ccc;
+    background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 #colunaDireita h2, #colunaDireita h3 {
-    margin-bottom: 10px;
     color: #f57c00;
 }
 
@@ -147,6 +129,51 @@ header img {
     font-weight: bold;
 }
 
-#colunaDireita ul li a:hover {
-    color: #f57c00;
+/* Estilo para os filtros */
+input[type="range"] {
+    width: 100%; /* Faz o slider ocupar toda a largura */
+    margin-top: 10px;
 }
+
+#promocao, #categoriaFamosas, #promocoesRelampago {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens se ajustem em várias linhas, se necessário */
+    gap: 20px; /* Espaçamento entre as imagens */
+    margin-bottom: 20px;
+}
+
+#promocoesRelampago img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    max-width: 300px; /* Limita o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que cada imagem ocupe uma linha por vez */
+    margin-bottom: 10px; /* Centraliza a imagem dentro do seu contêiner */
+}
+#promocoesRelampago {
+    display: block; /* Garante que o contêiner principal ocupe uma linha inteira */
+}
+#promocao h2, #categoriaFamosas h2 {
+    width: 100%; /* Faz o título ocupar toda a linha */
+    ;  /* Espaçamento entre o título e as imagens */
+    color: #ee4d2d;
+}
+
+.promocao, .categoria, .produtoRelampago {
+    display: flex;
+    flex-direction: column; /* Mantém as imagens em uma coluna com a legenda abaixo */
+    align-items: center; /* Centraliza a imagem e a legenda */
+    width: 200px; /* Ajusta a largura das imagens */
+}
+
+.promocao img, .categoria img, .produtoRelampago img {
+    width: 100%; /* Ajusta o tamanho da imagem para preencher a largura do item */
+    height: auto;
+}
+
+.promocao p, .categoria p, .produtoRelampago p {
+    text-align: center; /* Centraliza o texto abaixo da imagem */
+    font-size: 16px; /* Ajusta o tamanho da fonte conforme necessário */
+    margin-top: -50px; /* Diminui a distância entre a imagem e a legenda */
+}
+
+
