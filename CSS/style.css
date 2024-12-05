@@ -1,0 +1,152 @@
+/* Arquivo: style.css */
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte como Arial ou sans-serif */
+    margin: 0; /* Remove as margens padrão do navegador */
+    padding: 0; /* Remove os espaçamentos internos padrão do navegador */
+    background-color: #f8f8f8; /* Define uma cor de fundo clara */
+}
+
+/* Estilo para o cabeçalho */
+header {
+    display: flex; /* Usa Flexbox para organizar os elementos no cabeçalho */
+    align-items: center; /* Alinha os itens do cabeçalho verticalmente ao centro */
+    background-color: #af0f11; /* Define o fundo do cabeçalho como branco */
+    border-bottom: 2px solid #f57c00; /* Adiciona uma borda inferior laranja ao cabeçalho */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra ao cabeçalho */
+    position: fixed; /* Fixa o cabeçalho no topo da página */
+    top: 0; /* Posiciona o cabeçalho no topo */
+    width: 100%; /* Faz o cabeçalho ocupar toda a largura da tela */
+    z-index: 1000; /* Coloca o cabeçalho acima de outros elementos na pilha de renderização */
+}
+
+/* Estilo para a imagem no cabeçalho */
+header img {
+    height: 180px; /* Define a altura da imagem no cabeçalho */
+    object-fit: contain; /* Garante que a imagem não fique distorcida */
+    margin-left: 25px;
+}
+
+/* Estilo para a caixa de pesquisa */
+#caixaDEPesquisa {
+    display: flex; /* Usa Flexbox para organizar os itens da caixa de pesquisa */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    flex: 1; /* Faz a caixa de pesquisa ocupar todo o espaço disponível */
+    margin-left: 20px; /* Adiciona margem à esquerda da caixa de pesquisa */
+    border: 2px solid #f57c00; /* Adiciona uma borda laranja ao redor da caixa */
+    border-radius: 5px; /* Arredonda os cantos da borda */
+    background-color: #fff; /* Define o fundo da caixa como branco */
+    max-width: 800px; /* Limita a largura máxima da caixa de pesquisa */
+}
+
+/* Estilo para o campo de texto na caixa de pesquisa */
+#caixaDEPesquisa input[type="text"] {
+    flex: 1; /* Faz o campo de texto ocupar todo o espaço restante */
+    padding: 10px 15px; /* Adiciona espaçamento interno ao campo de texto */
+    font-size: 16px; /* Define o tamanho da fonte no campo de texto */
+    border: none; /* Remove a borda padrão do campo de texto */
+    outline: none; /* Remove o contorno padrão ao focar no campo */
+}
+
+/* Estilo para o botão na caixa de pesquisa */
+#caixaDEPesquisa button {
+    background-color: #f57c00; /* Define a cor de fundo do botão como laranja */
+    color: #fff; /* Define a cor do texto do botão como branco */
+    border: none; /* Remove a borda padrão do botão */
+    padding: 10px 20px; /* Adiciona espaçamento interno ao botão */
+    font-size: 16px; /* Define o tamanho da fonte no botão */
+    cursor: pointer; /* Mostra o cursor como uma "mão" ao passar sobre o botão */
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave na mudança de cor */
+}
+
+/* Estilo para o botão ao passar o mouse */
+#caixaDEPesquisa button:hover {
+    background-color: #af570a; /* Escurece a cor do botão no hover */
+}
+
+/*Estilo carrinho de compras*/
+#botaoCarrinho {
+    background: none; /* Remove o fundo do botão */
+    border: none; /* Remove a borda do botão */
+    padding: 0; /* Remove o preenchimento do botão */
+    cursor: pointer; /* Adiciona um cursor de "mão" ao passar sobre o botão */
+    display: inline-flex; /* Mantém o botão do tamanho da imagem */
+    align-items: center; /* Centraliza o conteúdo do botão verticalmente */
+    justify-content: center; /* Centraliza o conteúdo do botão horizontalmente */
+    margin-left: 50px;
+}
+
+/* Ajuste a imagem, se necessário */
+#carrinhoCompras {
+    width: 50px; /* Define a largura da imagem, ajuste conforme necessário */
+    height: auto; /* Define a altura da imagem, ajuste conforme necessário */
+}
+
+#conteudoPrincipal {
+    display: flex;
+    margin-top: 80px; /* Espaço para o header fixo */
+    padding: 20px;
+    gap: 20px;
+}
+
+/* Coluna esquerda */
+#colunaEsquerda {
+    flex: 3;
+}
+
+#colunaEsquerda section {
+    margin-bottom: 20px;
+}
+
+#colunaEsquerda img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#colunaEsquerda h2 {
+    margin-bottom: 10px;
+    color: #f57c00;
+}
+
+.promocao, .categoria, .produtoRelampago {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Coluna direita */
+#colunaDireita {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#colunaDireita h2, #colunaDireita h3 {
+    margin-bottom: 10px;
+    color: #f57c00;
+}
+
+#colunaDireita ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#colunaDireita ul li {
+    margin-bottom: 10px;
+}
+
+#colunaDireita ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+#colunaDireita ul li a:hover {
+    color: #f57c00;
+}

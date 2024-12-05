@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="/img/logo.png" alt="Logo">
+        <div id="caixaDEPesquisa">
+            <input type="text" placeholder="O que você esta procurando?">
+            <button>Buscar</button>
+        </div>
+        <button id="botaoCarrinho">
+            <img id="carrinhoCompras" src="/img/carrinho.png" alt="Carrinho de compras">
+        </button>
+    </header>
+    <main id="colunaPrincipal">
+        <div id="colunaEsquerda">
+            <section id="promocao">
+                <h2>Promoções</h2>
+                <div class="promocao">
+                    <img src="/img/logo.png" alt="promo1">
+                    <p>Produto em promoção - R$ 29,90</p>
+                </div>
+                <div class="promocao">
+                    <img src="/img/logo.png" alt="promo2">
+                    <p>Produto em promoção - R$ 29,90</p>
+                </div>
+            </section>
+            <section id="categoriaFamosas">
+                <h2>Categorias</h2>
+                <div class="categoria">
+                    <img src="/img/logo.png" alt="categ1">
+                    <p>Natal</p>
+                </div>
+                <div class="categoria">
+                    <img src="/img/logo.png" alt="categ2">
+                    <p>Lixeiras</p>
+                </div>
+            </section>
+            <section id="promocoesRelampago">
+                <h2>Promoções Relampagos</h2>
+                <div class="produtoRelampago">
+                    <img src="/img/logo.png" alt="promorelam1">
+                    <p>R$ 39,90</p>
+                </div>
+            </section>
+        </div>
+
+         <!-- Coluna Direita -->
+          <aside id="colunaDireita">
+            <h2>Filtros e Categoria</h2>
+            <ul>
+                <li><a href="#">Roupas</a></li>
+                <li><a href="#">Calçados</a></li>
+                <li><a href="#">Acessórios</a></li>
+                <li><a href="#">Decoração</a></li>
+            </ul>
+            <h3>Filtrar por Preço</h3>
+            <input type="range" min="0" max="1000" step="50">
+          </aside>
+    </main>
+</body>
+</html>
