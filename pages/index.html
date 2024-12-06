@@ -173,8 +173,6 @@
                             alt="estrela" class="estrela">
                         <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/productdetailspage/b1bcd65233e15eb99b68.svg"
                             alt="estrela" class="estrela">
-
-
                     </div>
                     <p>R$ 14,99</p>
                 </div>
@@ -196,15 +194,19 @@
         <aside id="colunaDireita">
             <h2>Filtros e Categoria</h2>
             <ul>
-                <li><a href="#">Roupas</a></li>
-                <li><a href="#">Calçados</a></li>
-                <li><a href="#">Acessórios</a></li>
-                <li><a href="#">Decoração</a></li>
+                <li><a href="#">Roupas </a></li>
+                <li><a href="#">Calçados </a></li>
+                <li><a href="#">Acessórios </a></li>
+                <li><a href="#">Decoração </a></li>
             </ul>
             <h3>Filtrar por Preço</h3>
-            <input type="range" min="0" max="1000" step="50">
+            <label for="precoRange">Até R$: <span id="valorPreco">500</span></label>
+            <input type="range" id="precoRange" min="0" max="1000" step="50" value="500">
+            <button id="aplicarFiltro">Aplicar Filtro</button>
         </aside>
     </main>
 </body>
+
+<script src="/JS/filtro.js"></script>
 
 </html>

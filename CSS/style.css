@@ -157,6 +157,9 @@ header img {
     background-color: #f57c00;
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 380px;
+    min-width: 280px;
+    
 }
 
 #colunaDireita h2,
@@ -168,6 +171,8 @@ header img {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 10px;
 }
 
 #colunaDireita ul li {
@@ -294,4 +299,100 @@ section h3{
 .avaliacao .estrela {
     width: 20px; /* Tamanho da estrela */
     height: auto; /* Mantém a proporção da imagem */
+}
+
+#valorPreco{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+#precoRange {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+#precoRange:hover,
+#precoRange:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+#precoRange:active {
+  opacity: .5;
+}
+
+#aplicarFiltro {
+  align-items: center;
+  background-color: #FFE7E7;
+  background-position: 0 0;
+  border: 1px solid #FEE0E0;
+  border-radius: 11px;
+  box-sizing: border-box;
+  color: #D33A2C;
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 33.4929px;
+  list-style: outside url(https://www.smashingmagazine.com/images/bullet.svg) none;
+  padding: 2px 12px;
+  text-align: left;
+  text-decoration: none;
+  text-shadow: none;
+  text-underline-offset: 1px;
+  transition: border .2s ease-in-out,box-shadow .2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  word-break: break-word;
+}
+
+#aplicarFiltro:active,
+#aplicarFiltro:hover,
+#aplicarFiltro:focus {
+  outline: 0;
+}
+
+
+#aplicarFiltro:active {
+  background-color: #D33A2C;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+  color: #FFFFFF;
+}
+
+#aplicarFiltro:hover {
+  background-color: #FFE3E3;
+  border-color: #FAA4A4;
+}
+
+#aplicarFiltro:active:hover,
+#aplicarFiltro:focus:hover,
+#aplicarFiltro:focus {
+  background-color: #D33A2C;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+  color: #FFFFFF;
 }
