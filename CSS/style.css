@@ -10,6 +10,7 @@ body {
     /* Remove os espaçamentos internos padrão do navegador */
     background-color: #f8f8f8;
     /* Define uma cor de fundo clara */
+    overflow-x: hidden; /* Evitar barra de rolagem horizontal */
 }
 
 /* Estilo para o cabeçalho */
@@ -77,29 +78,42 @@ header img {
     /* Remove o contorno padrão ao focar no campo */
 }
 
-/* Estilo para o botão na caixa de pesquisa */
 #caixaDEPesquisa button {
-    background-color: #f57c00;
-    /* Define a cor de fundo do botão como laranja */
-    color: #fff;
-    /* Define a cor do texto do botão como branco */
-    border: none;
-    /* Remove a borda padrão do botão */
-    padding: 10px 20px;
-    /* Adiciona espaçamento interno ao botão */
-    font-size: 16px;
-    /* Define o tamanho da fonte no botão */
-    cursor: pointer;
-    /* Mostra o cursor como uma "mão" ao passar sobre o botão */
-    transition: background-color 0.3s ease;
-    /* Adiciona uma transição suave na mudança de cor */
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
 }
 
-/* Estilo para o botão ao passar o mouse */
-#caixaDEPesquisa button:hover {
-    background-color: #af570a;
-    /* Escurece a cor do botão no hover */
+#caixaDEPesquisa button:hover,
+#caixaDEPesquisa button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
 }
+
+#caixaDEPesquisa button:active {
+  opacity: .5;
+}
+
 
 /*Estilo carrinho de compras*/
 #botaoCarrinho {
@@ -117,7 +131,7 @@ header img {
     /* Centraliza o conteúdo do botão verticalmente */
     justify-content: center;
     /* Centraliza o conteúdo do botão horizontalmente */
-    margin-left: 50px;
+    margin-left: 60px;
 }
 
 /* Ajuste a imagem, se necessário */
@@ -128,6 +142,87 @@ header img {
     /* Define a altura da imagem, ajuste conforme necessário */
 }
 
+#botaoPerfil {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    margin-left: 60px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Forma circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Cor de fundo para contraste */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#botaoPerfil img {
+    width: 90%; /* Reduz o tamanho da imagem para caber adequadamente */
+    height: 90%; /* Mantém as proporções */
+    object-fit: cover; /* Ajusta a imagem para preencher sem distorcer */
+    display: block; /* Remove espaçamentos ou margens implícitas */
+    margin: 0; /* Remove o margin-right desnecessário */
+}
+
+/* Efeito ao passar o mouse */
+#botaoPerfil:hover {
+    transform: scale(1.1); /* Leve aumento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+}
+
+/* Efeito ao clicar */
+#botaoPerfil:active {
+    transform: scale(0.95); /* Leve redução */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra menor */
+}
+
+/* Container do carrossel */
+.carrossel-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 180px; /* Distância para não sobrepor o cabeçalho */
+}
+
+/* Carrossel em si */
+.carrossel {
+    display: flex;
+    animation: moverCarrossel 40s linear infinite; /* Mais tempo para a animação */
+}
+
+/* Imagens do carrossel */
+.carrossel img {
+    width: 100vw; /* Imagens ocupando toda a largura da tela */
+    height: 100%; /* Garantir que a imagem ocupe a altura do container */
+    object-fit: cover; /* Ajusta a imagem para não distorcer */
+}
+
+/* Animação de transição das imagens */
+@keyframes moverCarrossel {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-100%);
+    }
+    40% {
+        transform: translateX(-200%);
+    }
+    60% {
+        transform: translateX(-300%);
+    }
+    80% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(-500%);
+    }
+}
 /* Conteúdo principal */
 #colunaPrincipal {
     margin-top: 30px;
@@ -171,8 +266,6 @@ header img {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    gap: 10px;
 }
 
 #colunaDireita ul li {
@@ -215,10 +308,6 @@ input[type="range"] {
     /* Centraliza a imagem dentro do seu contêiner */
 
 }
-#promocoesRelampago {
-    margin-top: 250px;
-}
-
 .linha-completa {
     width: 100%;          /* A imagem ocupa toda a largura do elemento pai */
     display: block;       /* Impede que outros elementos fiquem ao lado da imagem */
