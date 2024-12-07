@@ -10,7 +10,6 @@ body {
     /* Remove os espaçamentos internos padrão do navegador */
     background-color: #f8f8f8;
     /* Define uma cor de fundo clara */
-    overflow-x: hidden; /* Evitar barra de rolagem horizontal */
 }
 
 /* Estilo para o cabeçalho */
@@ -79,39 +78,39 @@ header img {
 }
 
 #caixaDEPesquisa button {
-  background: #FF4742;
-  border: 1px solid #FF4742;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
+    background: #FF4742;
+    border: 1px solid #FF4742;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    min-height: 40px;
+    outline: 0;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
 }
 
 #caixaDEPesquisa button:hover,
 #caixaDEPesquisa button:active {
-  background-color: initial;
-  background-position: 0 0;
-  color: #FF4742;
+    background-color: initial;
+    background-position: 0 0;
+    color: #FF4742;
 }
 
 #caixaDEPesquisa button:active {
-  opacity: .5;
+    opacity: .5;
 }
 
 
@@ -151,36 +150,111 @@ header img {
     margin-left: 60px;
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Forma circular */
+    border-radius: 50%;
+    /* Forma circular */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f0f0f0; /* Cor de fundo para contraste */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra leve */
+    background-color: #f0f0f0;
+    /* Cor de fundo para contraste */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Sombra leve */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #botaoPerfil img {
-    width: 90%; /* Reduz o tamanho da imagem para caber adequadamente */
-    height: 90%; /* Mantém as proporções */
-    object-fit: cover; /* Ajusta a imagem para preencher sem distorcer */
-    display: block; /* Remove espaçamentos ou margens implícitas */
-    margin: 0; /* Remove o margin-right desnecessário */
+    width: 90%;
+    /* Reduz o tamanho da imagem para caber adequadamente */
+    height: 90%;
+    /* Mantém as proporções */
+    object-fit: cover;
+    /* Ajusta a imagem para preencher sem distorcer */
+    display: block;
+    /* Remove espaçamentos ou margens implícitas */
+    margin: 0;
+    /* Remove o margin-right desnecessário */
 }
 
 /* Efeito ao passar o mouse */
 #botaoPerfil:hover {
-    transform: scale(1.1); /* Leve aumento */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+    transform: scale(1.1);
+    /* Leve aumento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Sombra mais forte */
 }
 
 /* Efeito ao clicar */
 #botaoPerfil:active {
-    transform: scale(0.95); /* Leve redução */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra menor */
+    transform: scale(0.95);
+    /* Leve redução */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    /* Sombra menor */
 }
 
-/* Container do carrossel */
+/* Media Queries para dispositivos móveis */
+
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        align-items: flex-start;
+        padding-top: 5px;
+    }
+
+    #caixaDEPesquisa {
+        margin-top: 20px;
+        min-width: 300px;
+        max-width: 300px;
+    }
+
+    #caixaDEPesquisa input[type="text"] {
+        width: 20%;
+        margin-bottom: 10px;
+    }
+
+    #caixaDEPesquisa button {
+        width: 20%;
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #botaoCarrinho{
+        margin-top: 30px;
+        margin-left: 1px;
+    }
+    #botaoPerfil {
+        margin-top: 28px;
+        margin-left: 28px;
+    }
+
+    #logoheader {
+        height: 100px;
+        /* Define a altura da imagem no cabeçalho */
+        object-fit: contain;
+        /* Garante que a imagem não fique distorcida */
+    }
+}
+    @media (max-width: 360px) {
+        header img {
+            height: 30px;
+            /* Ajuste o tamanho do logo para telas pequenas */
+        }
+
+        #caixaDEPesquisa input[type="text"] {
+            font-size: 14px;
+        }
+
+        #caixaDEPesquisa button {
+            font-size: 10px;
+            padding: 10px;
+        }
+
+        #carrinhoCompras,
+        #botaoPerfil img {
+            width: 30px;
+        }
+    }
+
+    /* Container do carrossel */
 .carrossel-container {
     width: 100%;
     height: 400px;
@@ -192,14 +266,18 @@ header img {
 /* Carrossel em si */
 .carrossel {
     display: flex;
-    animation: moverCarrossel 40s linear infinite; /* Mais tempo para a animação */
+    animation: moverCarrossel 40s linear infinite;
+    /* Mais tempo para a animação */
 }
 
 /* Imagens do carrossel */
 .carrossel img {
-    width: 100vw; /* Imagens ocupando toda a largura da tela */
-    height: 100%; /* Garantir que a imagem ocupe a altura do container */
-    object-fit: cover; /* Ajusta a imagem para não distorcer */
+    width: 100%;
+    /* Garantir que as imagens ocupem 100% da largura do container */
+    height: 100%;
+    /* Garantir que as imagens ocupem 100% da altura do container */
+    object-fit: cover;
+    /* Ajusta a imagem para não distorcer */
 }
 
 /* Animação de transição das imagens */
@@ -207,281 +285,345 @@ header img {
     0% {
         transform: translateX(0);
     }
+
     20% {
         transform: translateX(-100%);
     }
+
     40% {
         transform: translateX(-200%);
     }
+
     60% {
         transform: translateX(-300%);
     }
+
     80% {
         transform: translateX(-400%);
     }
+
     100% {
         transform: translateX(-500%);
     }
 }
-/* Conteúdo principal */
-#colunaPrincipal {
-    margin-top: 30px;
-    display: flex;
-    /* Define a estrutura de colunas */
-    padding: 20px;
-    background-color: #cacaca;
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .carrossel-container {
+        height: 300px; /* Ajusta a altura do carrossel para telas menores */
+        width: 760px;
+        margin-top: 100px;
+    }
+
+    /* Aumenta a velocidade da animação em telas menores para melhorar a experiência */
+    .carrossel {
+        animation: moverCarrossel 30s linear infinite;
+    }
 }
 
-/* Coluna esquerda */
-#colunaEsquerda {
-    flex: 3;
-    /* Define a largura da coluna esquerda */
-    padding-right: 20px;
-    /* Espaçamento entre as colunas */
+@media (max-width: 360px) {
+    .carrossel-container {
+        height: 250px; /* Ajusta a altura para telas muito pequenas */
+        width: 500px;
+        margin-top: 100px;
+    }
+
+    /* Reduz a duração da animação ainda mais para telas menores */
+    .carrossel {
+        animation: moverCarrossel 25s linear infinite;
+    }
 }
 
-#colunaEsquerda section {
-    margin-bottom: 20px;
-}
 
-/* Coluna direita */
-#colunaDireita {
-    flex: 0,1;
-    /* Define a largura da coluna direita */
-    padding: 20px;
-    background-color: #f57c00;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 380px;
-    min-width: 280px;
+    /* Conteúdo principal */
+    #colunaPrincipal {
+        margin-top: 30px;
+        display: flex;
+        /* Define a estrutura de colunas */
+        padding: 20px;
+        background-color: #cacaca;
+    }
+
+    /* Coluna esquerda */
+    #colunaEsquerda {
+        flex: 3;
+        /* Define a largura da coluna esquerda */
+        padding-right: 20px;
+        /* Espaçamento entre as colunas */
+    }
+
+    #colunaEsquerda section {
+        margin-bottom: 20px;
+    }
+
+    /* Coluna direita */
+    #colunaDireita {
+        flex: 0 1;
+        /* Define a largura da coluna direita */
+        padding: 20px;
+        background-color: #f57c00;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 380px;
+        min-width: 280px;
+
+    }
+
+    #colunaDireita h2,
+    #colunaDireita h3 {
+        color: #ffffff;
+    }
+
+    #colunaDireita ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #colunaDireita ul li {
+        margin-bottom: 10px;
+    }
+
+    #colunaDireita ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    /* Estilo para os filtros */
+    input[type="range"] {
+        width: 100%;
+        /* Faz o slider ocupar toda a largura */
+        margin-top: 10px;
+    }
+
+    #promocao,
+    #categoriaFamosas,
+    #promocoesRelampago {
+        display: flex;
+        flex-wrap: wrap;
+        /* Permite que as imagens se ajustem em várias linhas, se necessário */
+        gap: 20px;
+        /* Espaçamento entre as imagens */
+    }
+
+    #promocoesRelampago img {
+        width: 100%;
+        /* Faz a imagem ocupar toda a largura do contêiner */
+        max-width: 300px;
+        /* Limita o tamanho máximo da imagem */
+        height: auto;
+        /* Mantém a proporção da imagem */
+        display: block;
+        /* Garante que cada imagem ocupe uma linha por vez */
+        margin-bottom: 10px;
+        /* Centraliza a imagem dentro do seu contêiner */
+
+    }
+
+    .linha-completa {
+        width: 100%;
+        /* A imagem ocupa toda a largura do elemento pai */
+        display: block;
+        /* Impede que outros elementos fiquem ao lado da imagem */
+        height: auto;
+        /* Mantém as proporções originais da imagem */
+        margin: 0;
+        /* Remove margens extras, se houver */
+        padding: 0;
+        /* Remove qualquer preenchimento, se houver */
+    }
+
+    #promocao h2,
+    #categoriaFamosas h2 {
+        width: 100%;
+        /* Faz o título ocupar toda a linha */
+        color: #ee4d2d;
+    }
+
+    #promocoesRelampago h2 {
+        width: 100%;
+        /* Faz o título ocupar toda a linha */
+        color: #ee4d2d;
+    }
+
+
+    .promocao,
+    .categoria,
+    .produtoRelampago {
+        display: flex;
+        flex-direction: column;
+        /* Mantém as imagens em uma coluna com a legenda abaixo */
+        align-items: center;
+        /* Centraliza a imagem e a legenda */
+        width: 200px;
+        /* Ajusta a largura das imagens */
+        padding: 10px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        border: 2px solid transparent;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .promocao:hover,
+    .categoria:hover,
+    .produtoRelampago:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+        border-color: #af0f11;
+        border: 2px solid #ff6347;
+        /* Cor da borda ao passar o mouse */
+        transition: border-color 0.4s ease;
+        /* Transição suave */
+    }
+
+    .promocao img,
+    .categoria img,
+    .produtoRelampago img {
+        width: 100%;
+        /* Ajusta o tamanho da imagem para preencher a largura do item */
+        height: auto;
+    }
+
+    .promocao p,
+    .categoria p,
+    .produtoRelampago p {
+        color: #af0f11;
+        text-align: center;
+        /* Centraliza o texto abaixo da imagem */
+        font-size: 25px;
+        /* Ajusta o tamanho da fonte conforme necessário */
+        font-weight: bold;
+    }
+
+    section h3 {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .avaliacao {
+        display: flex;
+        gap: 5px;
+        /* Espaçamento entre as estrelas */
+        margin-bottom: 10px;
+        /* Espaçamento abaixo das estrelas */
+    }
+
+    .avaliacao .estrela {
+        width: 20px;
+        /* Tamanho da estrela */
+        height: auto;
+        /* Mantém a proporção da imagem */
+    }
+
+    #valorPreco {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        font-weight: bold;
+    }
+
+    #precoRange {
+        background: #FF4742;
+        border: 1px solid #FF4742;
+        border-radius: 6px;
+        box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: nunito, roboto, proxima-nova, "proxima nova", sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 16px;
+        min-height: 40px;
+        outline: 0;
+        padding: 12px 14px;
+        text-align: center;
+        text-rendering: geometricprecision;
+        text-transform: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        vertical-align: middle;
+    }
+
+    #precoRange:hover,
+    #precoRange:active {
+        background-color: initial;
+        background-position: 0 0;
+        color: #FF4742;
+    }
+
+    #precoRange:active {
+        opacity: .5;
+    }
+
+    #aplicarFiltro {
+        align-items: center;
+        background-color: #FFE7E7;
+        background-position: 0 0;
+        border: 1px solid #FEE0E0;
+        border-radius: 11px;
+        box-sizing: border-box;
+        color: #D33A2C;
+        cursor: pointer;
+        display: flex;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 33.4929px;
+        list-style: outside url(https://www.smashingmagazine.com/images/bullet.svg) none;
+        padding: 2px 12px;
+        text-align: left;
+        text-decoration: none;
+        text-shadow: none;
+        text-underline-offset: 1px;
+        transition: border .2s ease-in-out, box-shadow .2s ease-in-out;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        word-break: break-word;
+    }
+
+    #aplicarFiltro:active,
+    #aplicarFiltro:hover,
+    #aplicarFiltro:focus {
+        outline: 0;
+    }
+
+
+    #aplicarFiltro:active {
+        background-color: #D33A2C;
+        box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+        color: #FFFFFF;
+    }
+
+    #aplicarFiltro:hover {
+        background-color: #FFE3E3;
+        border-color: #FAA4A4;
+    }
+
+    #aplicarFiltro:active:hover,
+    #aplicarFiltro:focus:hover,
+    #aplicarFiltro:focus {
+        background-color: #D33A2C;
+        box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
+        color: #FFFFFF;
+    }
+    @media (max-width: 768px) {
+        #colunaPrincipal {
+            flex-direction: column;
+            align-items: center;
+        }
+        #colunaEsquerda,
+        #colunaDireita {
+            flex: 1 1 100%;
+        }
+        #promocoesRelampago img {
+            width: 100%;
+        }
+    }
     
-}
-
-#colunaDireita h2,
-#colunaDireita h3 {
-    color: #ffffff;
-}
-
-#colunaDireita ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#colunaDireita ul li {
-    margin-bottom: 10px;
-}
-
-#colunaDireita ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Estilo para os filtros */
-input[type="range"] {
-    width: 100%;
-    /* Faz o slider ocupar toda a largura */
-    margin-top: 10px;
-}
-
-#promocao,
-#categoriaFamosas,
-#promocoesRelampago {
-    display: flex;
-    flex-wrap: wrap;
-    /* Permite que as imagens se ajustem em várias linhas, se necessário */
-    gap: 20px;
-    /* Espaçamento entre as imagens */
-}
-
-#promocoesRelampago img {
-    width: 90%;
-    /* Faz a imagem ocupar toda a largura do contêiner */
-    max-width: 300px;
-    /* Limita o tamanho máximo da imagem */
-    height: auto;
-    /* Mantém a proporção da imagem */
-    display: block;
-    /* Garante que cada imagem ocupe uma linha por vez */
-    margin-bottom: 10px;
-    /* Centraliza a imagem dentro do seu contêiner */
-
-}
-.linha-completa {
-    width: 100%;          /* A imagem ocupa toda a largura do elemento pai */
-    display: block;       /* Impede que outros elementos fiquem ao lado da imagem */
-    height: auto;         /* Mantém as proporções originais da imagem */
-    margin: 0;            /* Remove margens extras, se houver */
-    padding: 0;           /* Remove qualquer preenchimento, se houver */
-}
-
-#promocao h2,
-#categoriaFamosas h2 {
-    width: 100%;
-    /* Faz o título ocupar toda a linha */
-    color: #ee4d2d;
-}
-#promocoesRelampago h2 {
-    width: 100%;
-    /* Faz o título ocupar toda a linha */
-    color: #ee4d2d;
-}
-
-
-.promocao,
-.categoria,
-.produtoRelampago {
-    display: flex;
-    flex-direction: column;
-    /* Mantém as imagens em uma coluna com a legenda abaixo */
-    align-items: center;
-    /* Centraliza a imagem e a legenda */
-    width: 200px;
-    /* Ajusta a largura das imagens */
-    padding: 10px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
-    border: 2px solid transparent;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-.promocao:hover, .categoria:hover, .produtoRelampago:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
-    border-color: #af0f11;
-    border: 2px solid #ff6347; /* Cor da borda ao passar o mouse */
-    transition: border-color 0.4s ease; /* Transição suave */
-}
-
-.promocao img,
-.categoria img,
-.produtoRelampago img {
-    width: 100%;
-    /* Ajusta o tamanho da imagem para preencher a largura do item */
-    height: auto;
-}
-
-.promocao p,
-.categoria p,
-.produtoRelampago p {
-    color: #af0f11;
-    text-align: center;
-    /* Centraliza o texto abaixo da imagem */
-    font-size: 25px;
-    /* Ajusta o tamanho da fonte conforme necessário */
-    font-weight: bold;
-}
-
-section h3{
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
-}
-
-.avaliacao {
-    display: flex;
-    gap: 5px; /* Espaçamento entre as estrelas */
-    margin-bottom: 10px; /* Espaçamento abaixo das estrelas */
-}
-
-.avaliacao .estrela {
-    width: 20px; /* Tamanho da estrela */
-    height: auto; /* Mantém a proporção da imagem */
-}
-
-#valorPreco{
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
-    font-weight: bold;
-}
-
-#precoRange {
-  background: #FF4742;
-  border: 1px solid #FF4742;
-  border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 16px;
-  min-height: 40px;
-  outline: 0;
-  padding: 12px 14px;
-  text-align: center;
-  text-rendering: geometricprecision;
-  text-transform: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-}
-
-#precoRange:hover,
-#precoRange:active {
-  background-color: initial;
-  background-position: 0 0;
-  color: #FF4742;
-}
-
-#precoRange:active {
-  opacity: .5;
-}
-
-#aplicarFiltro {
-  align-items: center;
-  background-color: #FFE7E7;
-  background-position: 0 0;
-  border: 1px solid #FEE0E0;
-  border-radius: 11px;
-  box-sizing: border-box;
-  color: #D33A2C;
-  cursor: pointer;
-  display: flex;
-  font-size: 1rem;
-  font-weight: 700;
-  line-height: 33.4929px;
-  list-style: outside url(https://www.smashingmagazine.com/images/bullet.svg) none;
-  padding: 2px 12px;
-  text-align: left;
-  text-decoration: none;
-  text-shadow: none;
-  text-underline-offset: 1px;
-  transition: border .2s ease-in-out,box-shadow .2s ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-  word-break: break-word;
-}
-
-#aplicarFiltro:active,
-#aplicarFiltro:hover,
-#aplicarFiltro:focus {
-  outline: 0;
-}
-
-
-#aplicarFiltro:active {
-  background-color: #D33A2C;
-  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
-  color: #FFFFFF;
-}
-
-#aplicarFiltro:hover {
-  background-color: #FFE3E3;
-  border-color: #FAA4A4;
-}
-
-#aplicarFiltro:active:hover,
-#aplicarFiltro:focus:hover,
-#aplicarFiltro:focus {
-  background-color: #D33A2C;
-  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px 0 inset;
-  color: #FFFFFF;
-}
